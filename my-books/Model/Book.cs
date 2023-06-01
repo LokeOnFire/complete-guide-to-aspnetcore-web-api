@@ -1,0 +1,32 @@
+﻿using System;
+using System.Collections.Generic;
+
+namespace my_books.Model
+{
+    public class Book
+    {
+        public int Id { get; set; }
+        public string Title { get; set; }
+        public string Description { get; set; }
+
+        public string IsRead { get; set; }
+
+        public DateTime? DateRead { get; set; }
+
+        public int? Rate { get; set; }
+
+        public string Genre { get; set; }
+
+        public string Author { get; set; }
+
+        public string CoverUrl { get; set; }
+
+        public DateTime DateAdded { get; set; }
+
+        //Navigation
+        public int? publisherId { get; set; }
+        public Publisher publisher { get; set; }
+
+        public List<Book_Author> book_authors { get; set; }
+    }
+}
